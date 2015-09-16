@@ -6,7 +6,7 @@
         Creator:Jospeh Scuiletti
         Purpose:Homework
         created:11:14 am 09/14/15
-        Last modified:09/14/15
+        Last modified:09/16/15
         */
         </script>
     <meta charset="utf-8">
@@ -20,13 +20,13 @@
 			var payRate = prompt("How much are you payed per hour?");
 			var realPay;
 			//Calculate
-			if(hours<0)						   realPay= "your hours are inconceivable"
-			else if (hours >  20 && hours<=39) realPay=2*hours*pay
-			else if (hours >= 40) 			   realPay=3*hours*pay;
-			else 							   realPay=hours*pay;
-				//output
-				document.write(realPay);
-				 document.write("<p> Your pay is" + realPay + ".</p>");
+				if		(hours<0)				   realPay=" your hours are inconceivable";
+				else if (hours < 20){			   realPay=hours*pay;}
+				else if (hours >  20 && hours<=39){ realPay=2*hours*pay;}
+				else if (hours >= 40){ 			   realPay=3*hours*pay;}
+				else 							   realPay=" your hours are inconceivable";
+					//output
+					 document.write("<p> Your pay is" + realPay + ".</p>");
 		</script>
     </body>
 </html>

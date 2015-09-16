@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+    <head>
+    <meta charset="utf-8">
+    <title>Whats your grade? Turanry constuct</title>
+    </head>
+    
+    <body>
+        <script type ="text/javascript">
+            //input score
+            var score= prompt("what's your score?");
+            var grade=  score<  0 ? " Not a possible score":
+           				score< 60 ? " an F":
+           				score< 70 ? " an D":
+           				score< 80 ? " an C":
+           				score< 90 ? " an B":	
+            			score<=100? " an A":
+											 " Not a possible score";
+			
+            document.write("<p> Your grade is" + grade + ".</p>");
+        </script>
+    </body>
+</html>

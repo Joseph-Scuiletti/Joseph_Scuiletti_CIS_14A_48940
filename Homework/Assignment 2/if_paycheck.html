@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+    <head>
+		<script>
+        /*
+        Creator:Jospeh Scuiletti
+        Purpose:Homework
+        created:11:14 am 09/16/15
+        Last modified:09/16/15
+        */
+        </script>
+    <meta charset="utf-8">
+    <title>Pay rate</title>
+    </head>
+
+    <body>
+    	<script type ="text/javascript">
+		//inputs
+			var hours= prompt("How many hours did you work?");
+			var payRate= prompt("How much are you payed per hour?");
+			var realPay;
+			//Calculate
+				if (hours<0)				   realPay=" your hours are inconceivable";
+				if (hours < 20)			   realPay=hours*pay;
+				if (hours >  20 && hours<=40) realPay=hours*pay+(hours-20)*pay;
+				if (hours > 40) 			   realPay=hours*pay+(hours-40)*pay;
+					//output
+					 document.write("<p> Your pay is" + realPay + ".</p>");
+		</script>
+    </body>
+</html>

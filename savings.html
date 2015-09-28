@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+    <head>
+    <meta charset="utf-8">
+    <title>Function Exploration</title>
+    <script  type="text/javascript"src="saveings.js"></script>
+    </head>
+    
+    <body>
+		<script>
+			//declare variables
+			var pv=100;
+			var int=0.06;
+			var nYears=12;
+			
+			//perform calculation/ call function
+			var fv1=save1(pv,int,nYears);
+			
+			//display
+			document.write("<p>present Value=$ "+pv+"</p>");
+			document.write("<p>Intrest rate= "+int*100+"%</p>");
+			document.write("<p>Number of years= "+nYears+"</p>");
+			document.write("<p>Futre Value=$ "+fv1.toFixed(2)+"</p>");
+            </script>
+    </body>
+</html>

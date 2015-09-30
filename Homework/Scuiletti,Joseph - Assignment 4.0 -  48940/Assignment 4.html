@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+    <head>
+    <meta charset="utf-8">
+    <title>Pay Check</title>
+		<script>
+		/*
+			Joseph Scuiletti
+			septeber 21 2015
+			Purpose: forloop
+		*/
+		</script>
+    </head>
+    
+    <body>
+    <table width="400" border="1">
+    <tr>
+      <th>Hours</th>
+      <th>gross pay</th>
+      <th>Pay rate in $'s/hour</th>
+      <th>Taxes</th>
+      <th>Net Pay </th>
+    </tr>
+    <script>
+//Declare variables
+	var payRate=prompt("Calculate your Paycheck table \n Pay Rate $'s");
+				var nHours=72;//Total number of hours in table
+				var payChk=0; //Initialize 
+				var dblTim=20;//Double time 
+				var trpTim=40;//Triple time 
+				var hours=0;
+				do{
+					document.write("<tr>");
+					  if(hours<=dblTim){
+						   payChk=hours*payRate;
+					  }else if(hours<trpTim){
+						   payChk=dblTim*payRate+(hours-dblTim)*2*payRate;
+					  }else{
+						   payChk=dblTim*payRate+(trpTim-dblTim)*2*payRate+(hours-trpTim)*3*payRate;
+					  }
+					  var tax=payChk*.1;
+					  var netPay=payChk-payChk*.1;
+					  document.write("<td>"+hours+"</td>");					  
+					  document.write("<td>$"+payChk.toFixed(2)+"</td>");
+					  document.write("<td>"+payRate+"</td>");
+					  document.write("<td>$"+tax.toFixed(2)+"</td>");
+					  document.write("<td>$"+netPay.toFixed(2)+"</td>");	
+					  document.write("</tr>");
+				}while(++hours<=nHours);
+	</script>
+	</table>
+    </body>
+</html>
